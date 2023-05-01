@@ -121,6 +121,7 @@ public class Animal {
 
         if(this.vivo && a.vivo){
             a.setHp(a.getHp() - this.forca);
+            
         }
         else {
             System.out.printf("\n\n--AÇÃO IMPOSSIBILITADA--\nAnimal atacante --> %s\nAnimal atacado --> %s\n\n", this.getVivo() ? "Vivo" : "Morto", a.getVivo() ? "Vivo" : "Morto");

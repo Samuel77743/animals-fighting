@@ -109,12 +109,18 @@ public class App {
         if(animal1 != null && animal2 != null) {
             animal1.atacar(animal2);
             
-            System.out.println(animal1.getNome() + "X" + animal2.getNome());
+            if(animal1.getVivo() && animal2.getVivo() == false ){
+                System.out.println("\n" + animal2.getNome() + " Está morto :(");
+            }
+
+            else if(animal1.getVivo() && animal2.getVivo()){
+            System.out.println(animal1.getNome() + " X " + animal2.getNome());
             System.out.println("\n>>> " + animal1.getNome() + " CAUSOU " + animal1.getForca() + " de dano no " + animal2.getNome());
 
             System.out.println(animal1.getNome() + " --> " + animal1.getHp() + "% de vida");
             System.out.println(animal2.getNome() + " --> " + animal2.getHp() + "% de vida");
-        }
+            }
+            }
 
         else{
             System.out.println("\n=========UM OU AMBOS ANIMAIS NÃO ENCONTRADOS=========");
